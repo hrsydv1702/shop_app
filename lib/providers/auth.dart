@@ -10,6 +10,7 @@ class Auth with ChangeNotifier {
   DateTime _expiryDate;
   String _userId;
   Timer _authTimer;
+  String key;
 
   bool get isAuth {
     return token != null;
@@ -34,7 +35,7 @@ class Auth with ChangeNotifier {
     String urlSegment,
   ) async {
     final url = Uri.parse(
-        'https://identitytoolkit.googleapis.com/v1/$urlSegment?key=AIzaSyArMuWaBGju-dUvRYgjC6IP7cVvSIX-clc');
+        'https://identitytoolkit.googleapis.com/v1/$urlSegment?key=$key');
     try {
       final response = await http.post(
         url,
