@@ -1,6 +1,6 @@
 # shop_app
 
-##About
+## About
 * This app lets users order a product and also users can add their products to sell.
 
 ## Built With 🛠
